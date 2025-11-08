@@ -1,4 +1,69 @@
+# Face Recognition Service
 
+This project implements an **end-to-end Face Recognition System** using **FastAPI** and **InsightFace**. The system detects faces using **RetinaFace** and recognizes them using **ArcFace**. The service is optimized for CPU inference and is Dockerized for easy deployment.
+
+## Features
+
+- **Face Detection** using **RetinaFace** (ONNX model).
+- **Face Recognition** using **ArcFace** (ONNX model).
+- FastAPI microservice with endpoints for face detection, recognition, and identity management.
+- ONNX models for efficient inference on CPU.
+- Dockerized for easy deployment.
+- High-performance design for real-time applications (e.g., CCTV).
+
+## Setup Instructions
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/face-recognition-service.git
+cd face-recognition-service
+
+2.Set up the virtual Environment
+python -m venv venv
+source venv/bin/activate   # For Mac/Linux
+venv\Scripts\activate      # For Windows
+
+3. Install dependencies
+pip install -r requirements.txt
+
+4. Download pre-trained models
+Use the provided script to download the models:
+bash models/download_models.sh
+
+5. Running the service locally
+To run the FastAPI application locally, use Uvicorn:
+uvicorn app.main:app --reload
+
+6. Running with Docker
+To run the service inside Docker, build and run the Docker image:
+docker build -t face-recognition-service .
+docker run -p 8000:8000 face-recognition-service
+
+7. API Endpoints
+/detect: Detect faces in an image.
+/recognize: Recognize a face and return the identity and confidence score.
+/add_identity: Add a new identity to the system.
+/list_identities: List all stored identities.
+
+8. Testing the service
+To run tests, use pytest:
+pytest tests/
+
+License
+
+MIT License - See LICENSE file for details.
+
+---
+
+### **Push to GitHub**
+
+1. Initialize the repository:
+```bash
+git init
+git add .
+git commit -m "Initial commit for face-recognition-service"
+git remote add origin <your-git-repository-url>
+git push -u origin master
 # InsightFace: 2D and 3D Face Analysis Project
 
 <div align="left">
