@@ -1,0 +1,26 @@
+face-recognition-service/
+│── app/                      # FastAPI microservice code
+│   ├── api/                  # API routes (e.g., /recognize, /add_identity)
+│   │   ├── routes.py         # FastAPI routes for recognition, identity addition
+│   │   └── schemas.py        # Pydantic schemas for request/response
+│   ├── core/                 # Core functionality for face recognition
+│   │   ├── detector.py       # RetinaFace/SCRFD detector wrapper
+│   │   ├── recognizer.py     # ArcFace face recognition wrapper
+│   │   └── database.py       # SQLite/Postgres DB for storing identities
+│   ├── utils/                # Utility functions (preprocessing, alignment, etc)
+│   │   ├── preprocess.py     # Image preprocessing (resize, align, etc)
+│   │   └── common.py         # General utility functions
+│   └── main.py               # FastAPI app entry point
+│
+│── models/                   # Pre-trained model files
+│   ├── retinaface.onnx       # RetinaFace face detector ONNX model
+│   ├── arcface.onnx          # ArcFace face recognition ONNX model
+│   └── readme.md             # Explanation about models
+│
+│── samples/                  # Sample images for testing
+│── tests/                    # Unit tests for the service
+│── Dockerfile                # Dockerfile for building image
+│── requirements.txt          # Python dependencies
+│── requirements-dev.txt      # Development dependencies for testing and linting
+│── README.md                 # Project overview and setup guide
+└── .gitignore                # Git ignore file
