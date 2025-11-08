@@ -1,0 +1,22 @@
+face-recognition-service/
+│── app/
+│   ├── api/                  # FastAPI routes for service
+│   │   ├── routes.py         # Endpoints (e.g., /recognize, /add_identity)
+│   │   └── schemas.py        # Pydantic schemas for requests/responses
+│   ├── core/                 # Core logic (models, database, etc)
+│   │   ├── detector.py       # Wrapper for RetinaFace/SCRFD
+│   │   ├── recognizer.py     # Wrapper for ArcFace
+│   │   └── database.py       # Database functions (SQLite/Postgres)
+│   ├── utils/                # Helper functions
+│   │   ├── preprocess.py     # Image preprocessing (resizing, alignment)
+│   │   └── common.py         # Other utilities
+│   └── main.py               # FastAPI app entry point
+│
+│── models/                   # Pre-trained models (e.g., retinaface.onnx, arcface.onnx)
+│── samples/                  # Test images
+│── tests/                    # Unit tests for service
+│── Dockerfile                # Dockerfile for containerization
+│── requirements.txt          # Python dependencies
+│── requirements-dev.txt      # Dev dependencies for testing and linting
+│── README.md                 # Project overview and setup guide
+└── .gitignore                # Git ignore file
