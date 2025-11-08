@@ -1,5 +1,5 @@
+<img width="5000" height="2875" alt="image" src="https://github.com/user-attachments/assets/2af66ce3-58c6-4c90-8cbd-0d9944f1e9c3" />
 
-![Uploading image.png…]()
 
 # Face Recognition Service
 
