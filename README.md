@@ -280,5 +280,5 @@ year={2019}
 
 Main contributors:
 
-**Kanishka Sejwal**
-**Amay Yadav**
+- **Kanishka Sejwal**
+- **Amay Yadav**
