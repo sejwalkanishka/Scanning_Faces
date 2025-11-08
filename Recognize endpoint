@@ -1,0 +1,7 @@
+@app.post("/recognize/")
+async def recognize_face(data: ImageData):
+    try:
+        identity, confidence = recognizer.recognize(data.image_path)
+        return {"identity": identity, "confidence": confidence}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
